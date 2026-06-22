@@ -1,0 +1,9 @@
+Package: gitr
+Version: 1.1
+Section: utils
+Priority: optional
+Architecture: all
+Depends: git
+Maintainer: its-noid-dev
+Homepage: https://github.com/its-noid-dev/gitr-apt
+Description: Simple git helper command
