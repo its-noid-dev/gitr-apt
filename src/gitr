@@ -1,9 +1,22 @@
 #!/bin/bash
 VERSION="1.1"
+
 case "$1" in
-  update) git add -A && git commit -m "${2:-update}" && git push ;;
-  status) git status ;;
-  log) git log --oneline -10 ;;
-  version) echo "gitr v$VERSION" ;;
-  *) echo -e "Usage: gitr <command>\n\n  update [msg]   add + commit + push\n  status         git status\n  log            laatste 10 commits\n  version        versie tonen" ;;
+  update)
+    git add -A &&
+    git commit -m "${2:-auto update}" &&
+    git push
+    ;;
+  status)
+    git status
+    ;;
+  log)
+    git log --oneline -10
+    ;;
+  version)
+    echo "gitr v$VERSION"
+    ;;
+  *)
+    echo -e "Usage: gitr <command>\n\n  update [msg]   deploy current code (add + commit + push)\n  status         git status\n  log            last 10 commits\n  version        version info"
+    ;;
 esac
